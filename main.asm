@@ -13,17 +13,17 @@ global vec3_lerp
 global vec3_reflect
 
 vec3_add:
-    movss xmm0, [rsi]       ; Load a.x
-    movss xmm1, [rsi+4]     ; Load a.y
-    movss xmm2, [rsi+8]     ; Load a.z
+    movss xmm0, [rsi]
+    movss xmm1, [rsi+4]
+    movss xmm2, [rsi+8]   
     
-    addss xmm0, [rdx]       ; a.x + b.x
-    addss xmm1, [rdx+4]     ; a.y + b.y
-    addss xmm2, [rdx+8]     ; a.z + b.z
+    addss xmm0, [rdx]      
+    addss xmm1, [rdx+4]    
+    addss xmm2, [rdx+8]    
     
-    movss [rdi], xmm0       ; Store result.x
-    movss [rdi+4], xmm1     ; Store result.y
-    movss [rdi+8], xmm2     ; Store result.z
+    movss [rdi], xmm0
+    movss [rdi+4], xmm1
+    movss [rdi+8], xmm2
     ret
 
 vec3_sub:
@@ -224,4 +224,5 @@ vec3_reflect:
     pop r13
     pop r12
     pop rbx
+
     ret
