@@ -27,10 +27,10 @@ vec3_add:
     ret
 
 vec3_sub:
-    movss xmm0, [rsi]       ; Load a.x
-    movss xmm1, [rsi+4]     ; Load a.y
-    movss xmm2, [rsi+8]     ; Load a.z
-    
+    movss xmm0, [rsi]      
+    movss xmm1, [rsi+4]     
+    movss xmm2, [rsi+8]     
+
     subss xmm0, [rdx]       ; a.x - b.x
     subss xmm1, [rdx+4]     ; a.y - b.y
     subss xmm2, [rdx+8]     ; a.z - b.z
@@ -226,3 +226,4 @@ vec3_reflect:
     pop rbx
 
     ret
+
